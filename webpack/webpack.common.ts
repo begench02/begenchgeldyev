@@ -7,7 +7,7 @@ import path from 'path'
 import TsconfigPathsWebpackPlugin from 'tsconfig-paths-webpack-plugin'
 
 export const webpackCommon: Configuration = {
-    entry: './src/main.tsx',
+    entry: path.resolve(__dirname, '..', 'src', 'main.tsx'),
     target: 'web',
     output: {
         publicPath: '/',
