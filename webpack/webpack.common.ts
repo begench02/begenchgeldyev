@@ -11,7 +11,7 @@ export const webpackCommon: Configuration = {
     target: 'web',
     output: {
         publicPath: '/',
-        path: path.join(__dirname, '../dist'),
+        path: path.resolve(__dirname, '..', 'dist'),
         filename: 'js/[[name].[chunkhash].js]',
         clean: true,
     },
@@ -53,17 +53,14 @@ export const webpackCommon: Configuration = {
             },
             {
                 test: /\.(jpe?g|png|gif|pdf)$/i,
-                type: 'asset',
+                type: 'asset/resource',
                 resourceQuery: /url/,
-                generator: {
-                    filename: 'assets/[hash][ext][query]',
-                },
             },
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './index.html',
+            template: path.resolve(__dirname, '..', 'index.html'),
             inject: true,
         }),
         new MiniCssExtractPlugin({
@@ -73,8 +70,13 @@ export const webpackCommon: Configuration = {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, '../src/assets'),
-                    to: path.resolve(__dirname, '../dist/assets'),
+                    from: path.resolve(__dirname, '..', 'src', 'assets'),
+                    to: path.resolve(__dirname, '..', 'dist', 'assets'),
+                    noErrorOnMissing: true,
+                },
+                {
+                    from: path.resolve(__dirname, '..', 'public'),
+                    to: path.resolve(__dirname, '..', 'dist'),
                     noErrorOnMissing: true,
                 },
             ],
