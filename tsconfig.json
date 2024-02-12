@@ -1,4 +1,5 @@
 {
+    "include": ["declarations.d.ts", "src"],
     "compilerOptions": {
         "allowJs": true,
         "esModuleInterop": true,
@@ -18,7 +19,14 @@
 
         "lib": ["es2022", "DOM", "DOM.Iterable"],
 
-        "jsx": "react-jsx"
+        "jsx": "react-jsx",
+
+        "baseUrl": ".",
+        "paths": {
+            "pages/*": ["./src/pages/*"],
+            "assets/*": ["./src/assets/*"],
+            "components/*": ["./src/components/*"]
+        }
     },
     "ts-node": {
         "compilerOptions": {

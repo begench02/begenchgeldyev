@@ -10,7 +10,6 @@ const webpackDev: Config | DevServerConfig = merge(webpackCommon, {
         filename: '[name].js',
     },
     devServer: {
-        open: true,
         hot: true,
     },
 })

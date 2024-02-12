@@ -10,6 +10,7 @@ export const webpackCommon: Configuration = {
     entry: './src/main.tsx',
     target: 'web',
     output: {
+        publicPath: '/',
         path: path.join(__dirname, '../dist'),
         filename: 'js/[[name].[chunkhash].js]',
         clean: true,
@@ -39,8 +40,21 @@ export const webpackCommon: Configuration = {
                 ],
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/i,
+                test: /\.svg$/i,
+                use: [
+                    {
+                        loader: '@svgr/webpack',
+                        options: {
+                            typescript: true,
+                            ext: 'tsx',
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.(jpe?g|png|gif|pdf)$/i,
                 type: 'asset',
+                resourceQuery: /url/,
                 generator: {
                     filename: 'assets/[hash][ext][query]',
                 },
