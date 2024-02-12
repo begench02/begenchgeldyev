@@ -12,7 +12,7 @@ export const webpackCommon: Configuration = {
     output: {
         publicPath: '/',
         path: path.resolve(__dirname, '..', 'dist'),
-        filename: 'js/[[name].[chunkhash].js]',
+        filename: 'js/[name].[chunkhash].js',
         clean: true,
     },
     module: {
