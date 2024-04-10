@@ -5,6 +5,7 @@ interface CssExports {
   'contacts': string;
   'info': string;
   'main': string;
+  'quote': string;
   'resume': string;
   'resume_block': string;
   'title': string;
