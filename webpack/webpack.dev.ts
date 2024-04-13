@@ -1,17 +1,18 @@
-import { Configuration as Config } from 'webpack'
-import { Configuration as DevServerConfig } from 'webpack-dev-server'
-import { merge } from 'webpack-merge'
-import { webpackCommon } from './webpack.common'
+import { Configuration as Config } from 'webpack';
+import { Configuration as DevServerConfig } from 'webpack-dev-server';
+import { merge } from 'webpack-merge';
+import { webpackCommon } from './webpack.common';
 
 const webpackDev: Config | DevServerConfig = merge(webpackCommon, {
-    mode: 'development',
-    devtool: 'source-map',
-    output: {
-        filename: '[name].js',
-    },
-    devServer: {
-        hot: true,
-    },
-})
+  mode: 'development',
+  devtool: 'source-map',
+  output: {
+    filename: '[name].js',
+  },
+  devServer: {
+    hot: true,
+    historyApiFallback: true,
+  },
+});
 
-export default webpackDev
+export default webpackDev;

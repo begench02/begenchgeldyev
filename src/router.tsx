@@ -1,4 +1,4 @@
-import { Blog } from 'pages/blog/blog'
+import { Blogs } from 'pages/blogs/blogs'
 import { Home } from 'pages/home/home'
 import { Layout } from 'components/layout/layout'
 import { Projects } from 'pages/projects/projects'
@@ -14,8 +14,8 @@ export const router: RouteObject[] = [
                 element: <Home />,
             },
             {
-                path: '/blog',
-                element: <Blog />,
+                path: '/blogs',
+                element: <Blogs />,
             },
             {
                 path: '/projects',

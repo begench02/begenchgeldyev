@@ -1,6 +1,6 @@
 import './styles/index.sass'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { router } from './router'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 export const App = () => {
     const routes = createBrowserRouter(router)

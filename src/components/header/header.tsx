@@ -1,16 +1,15 @@
-import styles from './header.module.sass';
 import { Link } from 'react-router-dom';
+import styles from './header.module.sass';
 
 export const Header = () => {
   return (
     <div className={styles.main}>
-      <div>Begench</div>
+      <Link className={styles.menu_item} to="/">
+        Begench
+      </Link>
       <div className={styles.menu}>
-        <Link className={styles.menu_item} to="/">
-          Home
-        </Link>
-        <Link className={styles.menu_item} to="/blog">
-          Blog
+        <Link className={styles.menu_item} to="/blogs">
+          Blogs
         </Link>
         <Link className={styles.menu_item} to="/projects">
           Projects

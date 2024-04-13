@@ -1,9 +1,6 @@
 import styles from './home.module.sass';
-// @ts-ignore
 import Github from 'assets/github.svg';
-// @ts-ignore
 import LinkedIn from 'assets/linkedin.svg';
-// @ts-ignore
 import Resume from 'assets/resume.svg';
 import { Link } from 'react-router-dom';
 
@@ -36,7 +33,7 @@ export const Home = () => {
 
         <div className={styles.resume_block}>
           <p>download cv: </p>
-          <Link to="Begench Geldyev.pdf" download rel="noreferrer" target="_target">
+          <Link to="Begench Geldyev(CV).pdf" download rel="noreferrer" target="_target">
             <Resume className={styles.resume} fill="#fff" />
           </Link>
         </div>
