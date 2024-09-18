@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <div className={styles.main}>
       <Link className={styles.menu_item} to="/">
-        Begench
+        Geldyev Begench
       </Link>
       <div className={styles.menu}>
         <Link className={styles.menu_item} to="/blogs">

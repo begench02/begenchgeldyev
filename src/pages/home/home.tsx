@@ -1,8 +1,8 @@
-import styles from './home.module.sass';
+import { Link } from 'react-router-dom';
 import Github from 'assets/github.svg';
 import LinkedIn from 'assets/linkedin.svg';
 import Resume from 'assets/resume.svg';
-import { Link } from 'react-router-dom';
+import styles from './home.module.sass';
 
 export const Home = () => {
   return (
