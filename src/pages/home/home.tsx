@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import Github from 'assets/github.svg';
 import LinkedIn from 'assets/linkedin.svg';
 import Resume from 'assets/resume.svg';
 import styles from './home.module.sass';
+import { FlipText } from 'components/flip-text/flip-text';
 
 export const Home = () => {
   return (
     <div className={styles.main}>
-      <div className={styles.title}>Software Engineer</div>
+      <FlipText texts={['Software Engineer', 'Vim Enjoyer', 'Linux Geek']} className={styles.title} />
       <div>
         <p>
           <div className={styles.quote}>

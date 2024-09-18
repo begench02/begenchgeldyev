@@ -10,6 +10,7 @@ const webpackDev: Config | DevServerConfig = merge(webpackCommon, {
     filename: '[name].js',
   },
   devServer: {
+    port: 3113,
     hot: true,
     historyApiFallback: true,
   },
